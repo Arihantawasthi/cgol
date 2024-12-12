@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES6",                                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+        "module": "ESNext",                                  /* Specify what module code is generated. */
+        "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+        "strict": true,                                      /* Enable all strict type-checking options. */
+        "removeComments": true,
+        "tsBuildInfoFile": "./.tsbuildinfo",
+        "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+    }
+}
