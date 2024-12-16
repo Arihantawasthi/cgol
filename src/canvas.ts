@@ -50,8 +50,5 @@ export default class Canvas {
     public drawCell(x: number, y: number, color: string) {
         this.ctx.fillStyle = color;
         this.ctx.fillRect(x, y, this.cellSize, this.cellSize);
-        this.ctx.lineWidth = 1;
-        this.ctx.strokeStyle = "black";
-        this.ctx.strokeRect(x, y, this.cellSize, this.cellSize);
     }
 }
