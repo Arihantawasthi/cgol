@@ -5,17 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CGOL::Conway's Game Of Life</title>
         <style>
+            * {
+                margin: 0;
+                paddding: 0;
+                box-sizing: border-box;
+            }
             body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
-                overflow: hidden;
+            }
+            .info-box {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #1b1b1b;
+                border-radius: 8px;
+                padding: 0.8rem;
+                color: white;
+            }
+            .population {
+                margin-bottom: 0.4rem;
             }
         </style>
     </head>
     <body style="background-color: #111111;">
         <canvas id="game"></canvas>
+        <div class="info-box">
+            <p class="population">Population: <span id="population">1</span></p>
+            <p>Generations: <span id="generationCount">1</span></p>
+        </div>
         <script type="module" src="./src/index.ts"></script>
     </body>
 </html>

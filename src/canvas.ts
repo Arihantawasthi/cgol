@@ -1,5 +1,5 @@
-const DESKTOP_PADDING = 300;
-const MOBILE_PADDING = 100;
+const DESKTOP_PADDING = 0;
+const MOBILE_PADDING = 0;
 
 export default class Canvas {
     private canvas: HTMLCanvasElement;
