@@ -28,12 +28,6 @@ export default class Game {
                 grid[i][j] = Math.random() < probability ? 1 : 0;
             }
         }
-
-        grid[1][2] = 1;
-        grid[2][3] = 1;
-        grid[3][1] = 1;
-        grid[3][2] = 1;
-        grid[3][3] = 1;
         return grid;
     }
 
@@ -84,12 +78,18 @@ export default class Game {
         this.state = nextState;
     }
 
-    public draw() {
+    public drawAndCalculatePopuation() {
+        let population = 0;
         this.state.forEach((rows, i) => {
             rows.forEach((_, j) => {
-                this.canvas.drawCell(j * this.canvas.cellSize, i * this.canvas.cellSize, this.state[i][j] == 1 ? "white" : "#1b1b1b");
+                if (this.state[i][j] == 1) {
+                    population++;
+                }
+                this.canvas.drawCell(j * this.canvas.cellSize, i * this.canvas.cellSize, this.state[i][j] == 1 ? "white" : "#111");
             })
         })
+
+        return population;
     }
 
     public handleResize() {
@@ -98,6 +98,6 @@ export default class Game {
         this.cols = this.canvas.cols;
         this.state = this.createState(this.rows, this.cols);
         this.updateState();
-        this.draw();
+        this.drawAndCalculatePopuation();
     }
 }
