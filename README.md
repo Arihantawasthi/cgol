@@ -1,3 +1,3 @@
-#CGOL: Conway's Game of Life
+# CGOL: Conway's Game of Life
 
 ![](assets/cgol.gif)
